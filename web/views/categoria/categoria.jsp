@@ -14,7 +14,7 @@
         <h1>Lista de categorias</h1>
         
         <p>
-        <s:a action ="add" cssClass="btn-success"> Agregar</s:a>
+            <s:a  action ="execute" cssClass="btn btn-success" href="views/categoria/insertar.jsp"> Agregar</s:a>
     </p>
         <table class="table table-bordered">
             <thead> 
@@ -27,14 +27,15 @@
                 <tr>
                     <td> <s:property value="id" />  </td>
                     <td> <s:property value="descripcion" />  </td>
-                    <td> <s:a action="editar"> 
+                    <td> 
+                        <s:a action="editar" href="views/categoria/editar.jsp"> 
                             <s:param name="id" value="id"/>
-                            <i class="bi bi-pencil"></i> 
-                         </s:a>   
-                            <s:a action="eliminar"> 
-                            <s:param name="id" value="id"/>
-                            <i class="glyphicon glyphicon-trash"></i> 
-                         </s:a>    
+                            <i class="btn btn-primary">EDITAR</i> 
+                        </s:a>   
+                        <s:a href="views/categoria/eliminar.jsp"> 
+                                <s:param name="id" value="id"/>
+                                <i action="execute" class="btn btn-danger">ELIMINAR</i> 
+                        </s:a>    
                     </td>
                 </tr>
             </s:iterator>

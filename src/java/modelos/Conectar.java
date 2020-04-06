@@ -14,7 +14,37 @@ import java.util.ArrayList;
 
 
 public class Conectar {
+    private String server, user , bd, pass;
     private Connection con;
+
+   
+    
+    
+public void con() throws Exception
+    {
+     try
+     {
+         Class.forName("com.mysql.jdbc.Driver");
+            this.con=DriverManager.getConnection("jdbc:mysql://"+this.server+"/"+this.bd, this.user, this.pass);      
+     } catch (ClassNotFoundException e)
+     {
+         e.printStackTrace();
+         
+     }
+    }
+     public void desconectar() throws SQLException
+     {
+         this.con.close();
+     } 
+    public Connection getCon() {
+        return con;
+    }
+
+    public void setCon(Connection con) {
+        this.con = con;
+    }
+}
+   /* private Connection con;
     private PreparedStatement consultas;
     private ResultSet datos;
     private String server, user , bd, pass;
@@ -33,7 +63,7 @@ public class Conectar {
      try
      {
          Class.forName("com.mysql.jdbc.Driver");
-            this.con=DriverManager.getConnection("jdbc:mysql://"+this.server+"/"+this.bd, this.user, this.pass);      
+            this.con=DriverManager.getConnection("jdbc:mysql://"+this.server+"/"+this.bd, this.user, this.pass);            
      } catch (ClassNotFoundException e)
      {
          e.printStackTrace();
@@ -71,7 +101,6 @@ public class Conectar {
    this.con();
    this.consultas=this.con.prepareStatement(sql);
    this.datos=this.consultas.executeQuery();
-   }
-}
+   }*/
 
 

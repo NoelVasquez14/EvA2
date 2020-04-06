@@ -12,9 +12,21 @@
            
         <action name="categoria" class="controller.CategoriaController_1" method="execute"> 
             <result name="success"> /views/categoria/categoria.jsp </result>
+        
         </action>
-        <action name="evento" class="controller.EventoController" method="execute"> 
+        
+        
+        <action name="actividades" class="controller.EventoController" method="execute"> 
             <result name="success"> /views/categoria/evento.jsp </result>
         </action>
+    </package>
+    <package name ="categoria" namespace="/categoria" extends= "struts-default">
+        <action name="agregar" class="controller.CategoriaController_1" method="execute">
+           
+            <result name="exito"> /views/categoria/categoria.jsp </result>
+        </action>
+        
+       
+      
     </package>
 </struts>

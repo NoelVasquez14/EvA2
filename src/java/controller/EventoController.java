@@ -57,7 +57,7 @@ private int largo;
      public String execute() throws SQLException, Exception {
          this.datos=new ArrayList<>();
          this.con=new Evento();
-         this.datos=con.getData("select id,descripcion from Actividad");
+         this.datos=con.getData("select * from Actividad");
          
           return SUCCESS;
       }
