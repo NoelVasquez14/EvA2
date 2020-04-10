@@ -18,7 +18,7 @@ import java.util.ArrayList;
  */
 
 
-public class Evento {
+public class Actividad {
     
       
  private Connection con;
@@ -26,8 +26,8 @@ public class Evento {
     private ResultSet datos;
     private String server, user , bd, pass;
     private ArrayList<Categoria> arreglo;
-    private ArrayList<Evento> arreglo1;
-    public Evento(){
+    private ArrayList<Actividad> arreglo1;
+    public Actividad(){
         this.server ="localhost";
         this.user="root";
         this.pass="";

@@ -1,6 +1,7 @@
 
 package modelos;
 
+
 import controller.CategoriaController_1;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +10,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 
 public class Categoria {
    private Connection con;
@@ -22,6 +26,7 @@ public class Categoria {
         this.con = con;
     }
     private PreparedStatement consultas;
+     private PreparedStatement tsnt;
     private ResultSet datos;
     private String server, user , bd, pass;
     private ArrayList<Categoria> arreglo;
@@ -102,7 +107,8 @@ public class Categoria {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-public static boolean agregarUsuario(CategoriaController_1  categoria){
+    /*
+public static boolean agregarCategoria(CategoriaController_1  descripcion){
   boolean agregado=false;
   try {
    Conectar c=new Conectar();
@@ -110,7 +116,7 @@ public static boolean agregarUsuario(CategoriaController_1  categoria){
    if(con!=null){
     Statement st;
     st = con.createStatement();
-    st.executeUpdate("INSERT INTO categoria(descripcion) VALUES (categoria.getDescripcion())");
+    st.executeUpdate("INSERT INTO categoria VALUES (?)");
     agregado=true;
     st.close();
    }
@@ -119,8 +125,11 @@ public static boolean agregarUsuario(CategoriaController_1  categoria){
    agregado=false;
    e.printStackTrace();
   }
+  
   return agregado;
  }
+
+ */
  }
     
     

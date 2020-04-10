@@ -6,11 +6,11 @@
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
          
-        <title>Categoria</title>
+        <title  >Ponente</title>
     
     </head>
     <body>
-        <h1>Lista de categorias</h1>
+        <h1 align="center" >Lista de Ponentes</h1>
         
         <p>
             <s:a  action ="execute" cssClass="btn btn-success" href="views/categoria/insertar.jsp"> Agregar</s:a>
@@ -18,14 +18,28 @@
         <table class="table table-bordered">
             <thead> 
             <th>ID</th>
-            <th>DESCRIPCION</th>
+            <th>Nombre o razón social</th>
+            <th>rfc</th>
+            <th>contacto</th>
+            <th>url</th>
+            <th>correo</th>
+            <th>telefono</th>
+            <th>direccion</th>
+            
+            
             <th>ACCIONES</th>
             </thead>
             <tbody>
             <s:iterator value="datos" var="dato" status="estado"> 
                 <tr>
                     <td> <s:property value="id" />  </td>
-                    <td> <s:property value="descripcion" />  </td>
+                    <td> <s:property value="nombreorazonsocial" />  </td>
+                    <td> <s:property value="rfc" />  </td>
+                    <td> <s:property  value="contacto" />  </td>
+                    <td> <s:property value="url" />  </td>
+                    <td> <s:property value="correo" />  </td>
+                    <td> <s:property value="telefono" />  </td>
+                    <td> <s:property value="direccion" />  </td>
                     <td> 
                         <s:a action="editar" href="views/categoria/editar.jsp"> 
                             <s:param name="id" value="id"/>
@@ -47,3 +61,4 @@
         
        
 </html>
+

@@ -8,12 +8,12 @@ package controller;
 import com.opensymphony.xwork2.ActionSupport;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import modelos.Evento;
-import modelos.Evento.Categoria;
+import modelos.Actividad;
+import modelos.Actividad.Categoria;
 
 
 
-public class EventoController extends ActionSupport{
+public class ActividadController extends ActionSupport{
     
    
   private  String nombre; 
@@ -22,15 +22,15 @@ public class EventoController extends ActionSupport{
         return nombre;
     }
 
-private Evento con;
+private Actividad con;
 private ArrayList<Categoria> datos;
 private int largo;
 
-    public Evento getCon() {
+    public Actividad getCon() {
         return con;
     }
 
-    public void setCon(Evento con) {
+    public void setCon(Actividad con) {
         this.con = con;
     }
 
@@ -56,7 +56,7 @@ private int largo;
      @Override    
      public String execute() throws SQLException, Exception {
          this.datos=new ArrayList<>();
-         this.con=new Evento();
+         this.con=new Actividad();
          this.datos=con.getData("select * from Actividad");
          
           return SUCCESS;
