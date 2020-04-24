@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
-        <title>Registro Categoria</title>
+        <title>Registro Actividad</title>
 </head>
 <body>
 <div align="center">
@@ -18,12 +18,14 @@
 
 <tr>
 <td>
-<s:form action="RegistrarCategoria">    
-    <s:textfield name="txtdescripcion" label="Descripcion" />
-    <s:submit value="Registrar" />
+    <fieldset style="width: 300px"> 
+        <legend>Registrar Actividad</legend>
+<s:form action="Registrar">    
+    <s:textfield  label="Descripcion" name="txtdescripcion"></s:textfield>
+    <s:submit  value="Registrar" />
 </s:form>
 
-    
+    </fieldset> 
 </div>
     </body>
 </html>

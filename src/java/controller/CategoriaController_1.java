@@ -25,6 +25,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 import javax.xml.ws.Action;
+import mantenimientos.GestionActividad;
+import mantenimientos.GestionCategoria;
 import modelos.Conectar;
 import org.apache.struts2.convention.annotation.Namespace;
 import org.apache.struts2.convention.annotation.Result;
@@ -39,8 +41,18 @@ public class CategoriaController_1 extends ActionSupport {
   private String txtDescuento;
   private CategoriaController_1 categoria;
   private String descripcion;
+private Categoria objCat;
+private String txtdescripcion;
 
+    public String getTxtdescripcion() {
+        return txtdescripcion;
+    }
+
+    public void setTxtdescripcion(String txtdescripcion) {
+        this.txtdescripcion = txtdescripcion;
+    }
  
+
     public String getDescripcion() {
         return descripcion;
     }
@@ -117,6 +129,28 @@ private int largo;
 }
 
   
+public String ingresar(){
+    objCat = new Categoria (txtdescripcion);
+    try {
+        GestionCategoria ac = new GestionCategoria();
+        ac.RegistrarCategoria(objCat);
+        return "exito";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+    
+    
+}
+
+    public Categoria getObjCat() {
+        return objCat;
+    }
+
+    public void setObjCat(Categoria objCat) {
+        this.objCat = objCat;
+    }
+
 }
 
     

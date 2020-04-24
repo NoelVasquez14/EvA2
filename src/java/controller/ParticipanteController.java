@@ -27,7 +27,7 @@ private int id;
    private String intitucionprocedencia;
     private String cuenta; 
     private String password;
-    private String correo;
+  
 
     public String getCurp() {
         return curp;
@@ -82,13 +82,7 @@ private int id;
         this.password = password;
     }
 
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
+    
 
  
     public String getNombre() {

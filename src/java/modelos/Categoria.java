@@ -107,6 +107,8 @@ public class Categoria {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+    
+    
     /*
 public static boolean agregarCategoria(CategoriaController_1  descripcion){
   boolean agregado=false;
@@ -130,6 +132,10 @@ public static boolean agregarCategoria(CategoriaController_1  descripcion){
  }
 
  */
+
+    public Categoria(String descripcion) {
+        this.descripcion = descripcion;
+    }
  }
     
     

@@ -58,8 +58,8 @@ public class Participante {
          while(this.datos.next())
          {
              this.arreglo.add(new Participante(datos.getInt("id"),datos.getString("nombrecompleto"), 
-              datos.getString("curp"),datos.getString("institucionprocedencia")
-            , datos.getString("cuenta"), datos.getString("password"), datos.getString("correo")));
+              datos.getString("curp"),datos.getString("intitucionprocedencia")
+            , datos.getString("cuenta"), datos.getString("password")));
          }
          
          return this.arreglo;
@@ -75,14 +75,14 @@ public class Participante {
       private String password;
       private String correo;
       
-     public Participante(int id , String nombrecompleto , String curp, String institucionprocedencia,  String cuenta , String password , String correo ){
+     public Participante(int id , String nombrecompleto , String curp, String intitucionprocedencia,  String cuenta , String password  ){
     this.id= id;
     this.nombrecompleto=nombrecompleto;
     this.curp= curp;
-    this.intitucionprocedencia=institucionprocedencia;
+    this.intitucionprocedencia=intitucionprocedencia;
     this.cuenta=cuenta;
     this.password=password;
-    this.correo=correo;
+ 
     
     
 }
@@ -137,12 +137,6 @@ public class Participante {
 
    
 
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
+  
       
 }

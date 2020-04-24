@@ -5,7 +5,11 @@
 <struts>
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
-        
+            <!--   <action name="registrar" class="controller.ActividadController" method="execute1" >
+           
+            <result name="SUCCESS"> /views/actividad/exito.jsp </result>
+             <result name="error"> /views/actividad/error.jsp </result>
+        </action> -->
     </package>
     
     <package name="controller" namespace="/"   extends="struts-default">
@@ -23,25 +27,53 @@
              <result name="success"> /views/participante/participante.jsp </result>
              
          </action>
-        <action name="actividade" class="controller.ActividadController" method="execute"> 
+        <action name="actividad" class="controller.ActividadController" method="execute"> 
             <result name="success"> /views/actividad/actividad.jsp </result>
         </action>
         <action name="organizador" class="controller.OrganizadorController" method="execute"> 
             <result name="success"> /views/organizador/organizador.jsp </result>
         </action>
-       
-    </package>
-    <package name ="categoria" namespace="/categoria" extends= "struts-default">
-        <action name="agregar" class="controller.CategoriaController_1" method="execute">
-           
-            <result name="exito"> /views/categoria/categoria.jsp </result>
+       <action name="pago" class="controller.PagoController" method="execute"> 
+            <result name="success"> /views/pago/pago.jsp </result>
         </action>
         
-        <action name= "insertar">
+    </package>
+    
+    
+    <package name ="categoria" namespace="/categoria" extends= "struts-default">
+        
+        <action name= "insertarCategoria" >
             <result > /views/categoria/insertar.jsp</result>       
         </action>
-       
+         
+        <action name="RegistrarCategoria" class="controller.CategoriaController_1" method = "ingresar">
+           
+            <result name="exito"> /views/categoria/exito.jsp </result>
+            <result name="error"> /views/categoria/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.CategoriaController_1" method="execute">
+           
+            <result > /views/categoria/categoria.jsp</result> 
+        </action>
 
       
+    </package>
+    
+    
+    <package name ="actividad" namespace="/actividad" extends= "struts-default">
+        
+        <action name= "insertarActividad" >
+            <result > /views/actividad/insertar.jsp</result>       
+        </action>
+        
+        <action name="Registrar" class="controller.ActividadController" method = "ingresar">
+           
+            <result name="exito"> /views/actividad/exito.jsp </result>
+            <result name="error"> /views/actividad/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.ActividadController" method="execute">
+           
+            <result > /views/actividad/actividad.jsp</result> 
+        </action>
     </package>
 </struts>

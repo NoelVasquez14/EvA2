@@ -10,10 +10,10 @@
     
     </head>
     <body>
-        <h1 align="center" >Lista de Ponentes</h1>
+        <h1 align="center" >Lista de Organizadores</h1>
         
         <p>
-            <s:a  action ="execute" cssClass="btn btn-success" href="views/categoria/insertar.jsp"> Agregar</s:a>
+            <s:a  action ="insertarOrganizador" cssClass="btn btn-success" > Agregar</s:a>
     </p>
         <table class="table table-bordered">
             <thead> 
