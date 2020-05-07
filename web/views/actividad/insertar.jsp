@@ -22,7 +22,7 @@
         <legend>Registrar Actividad</legend>
 <s:form action="Registrar">    
     <s:textfield  label="Descripcion" name="txtdescripcion"></s:textfield>
-    <s:submit  value="Registrar" />
+     <s:submit  value="Registrar" />
 </s:form>
 
     </fieldset> 

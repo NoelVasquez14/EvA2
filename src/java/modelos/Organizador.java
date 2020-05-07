@@ -1,8 +1,4 @@
-/*
- * Bienvenido 
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package modelos;
 
 import java.sql.Connection;
@@ -11,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.*;
 
 /**
  *
@@ -88,6 +85,20 @@ public class Organizador {
     
     
 }
+
+    public Organizador(String nombreorazonsocial, String rfc, String contacto, String url, String correo, String telefono, String direccion) {
+        this.nombreorazonsocial = nombreorazonsocial;
+        this.rfc = rfc;
+        this.contacto = contacto;
+        this.url = url;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.direccion = direccion;
+    }
+
+    public Organizador(int id) {
+        this.id = id;
+    }
 
     
 

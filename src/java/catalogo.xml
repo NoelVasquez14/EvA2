@@ -1,0 +1,45 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    
+   
+    <package name ="catalogo" namespace="/catalogo" extends= "struts-default">
+       
+        <action name="catalogo" class="controller.CatalogoController" method = "execute">
+           
+            <result > /views/catalogo/catalogo.jsp </result>    
+        </action>
+        
+        
+        <action name="insertar" >
+            <result >/views/catalogo/insertar.jsp</result>       
+        </action>
+        
+        
+        <action name="Registrar" class="controller.CatalogoController" method = "ingresar">
+           
+            <result name="exito"> /views/catalogo/exito.jsp </result>
+            <result name="error"> /views/catalogo/error.jsp </result>
+        </action>
+         <action name="regresar" class="controller.CatalogoController" method = "execute">
+           
+            <result  name="SUCCESS" > /views/catalogo/catalogo.jsp </result>    
+        </action>
+        
+       <action name="execute1" class="controller.CatalogoController" method="execute1">
+           
+            <result >/views/catalogo/editar.jsp</result> 
+        </action>
+        <action name="eliminar" class="controller.CatalogoController" method="eliminar" > 
+            <result name="SUCCESS">/views/catalogo/eliminar.jsp  </result>
+        </action>
+     
+         <action name="Actualizar" class="controller.CatalogoController" method="Actualizar" > 
+            <result name="SUCCESS">/views/organizador/organizadoractualizada.jsp  </result>
+            <result name="error"> /views/organizador/editar.jsp </result>
+        </action>
+    </package>
+</struts>

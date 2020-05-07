@@ -3,8 +3,98 @@
 "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-    <include file="example.xml"/>
+    
+    <include file="categoria.xml"></include>
+    <include file="actividad.xml" />
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
+            <!--   <action name="registrar" class="controller.ActividadController" method="execute1" >
+           
+            <result name="SUCCESS"> /views/actividad/exito.jsp </result>
+             <result name="error"> /views/actividad/error.jsp </result>
+        </action> -->
+       
+         
+    </package>
+    
+    <package name="controller" namespace="/"   extends="struts-default">
+        
+          <action name="insertar" class="controller.ControladorPonente" method = "accion">
+           
+            <result > /views/ponente/insertar.jsp </result>
+            <result name="error"> /views/organizador/error.jsp </result>
+        </action>
+       
+         <action name= "ponente" class="controller.PonenteController" method="execute">
+             <result name="success"> /views/ponente/ponente.jsp </result>
+             
+         </action>
+         
+       <action name= "participante" class="controller.ParticipanteController" method="execute">
+             <result name="success"> /views/participante/participante.jsp </result>
+             
+         </action>
+         <action name= "login" class="controller.LoginController" method="login" >
+            <result name="succes"> /views/login/bienvenido.jsp</result>      
+             <result name="error"> login.jsp</result>    
+        </action>
+         
+        
+        <action name="organizador" class="controller.OrganizadorController" method="execute"> 
+            <result name="success"> /views/organizador/organizador.jsp </result>
+        </action>
+       <action name="pago" class="controller.PagoController" method="execute"> 
+            <result name="success"> /views/pago/pago.jsp </result>
+        </action>
+        
+    </package>
+    
+    <package name ="organizador" namespace="/organizador" extends= "struts-default">
+        
+        <action name= "insertar" >
+            <result > /views/organizador/insertar.jsp</result>       
+        </action>
+        
+        <action name="Registrar" class="controller.OrganizadorController" method = "ingresar">
+           
+            <result name="exito"> /views/organizador/exito.jsp </result>
+            <result name="error"> /views/organizador/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.OrganizadorController" method="execute">
+           
+            <result > /views/organizador/organizador.jsp</result> 
+        </action>
+    </package>
+    <package name ="participante" namespace="/participante" extends= "struts-default">
+        
+        <action name= "insertar" >
+            <result > /views/participante/insertar.jsp</result>       
+        </action>
+        
+        <action name="Registrar" class="controller.ParticipanteController" method = "ingresar">
+           
+            <result name="exito"> /views/participante/exito.jsp </result>
+            <result name="error"> /views/participante/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.ParticipanteController" method="execute">
+           
+            <result > /views/participante/participante.jsp</result> 
+        </action>
+     
+    </package>
+    <package name ="ponente" namespace="/ponente" extends= "struts-default">
+    
+        <action name="insertar">
+
+            <result> /views/ponente/insertar.jsp </result>
+        </action>
+        <action name="regresar" class="controller.OrganizadorController" method="execute">
+           
+            <result > /views/organizador/organizador.jsp</result> 
+        </action>
+        <action name="Registrar" class="controller.PonenteController" method="Registrar">
+           
+            <result name="SUCCESS"> /views/ponente/cargado.jsp</result> 
+        </action>
     </package>
 </struts>

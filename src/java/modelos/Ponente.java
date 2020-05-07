@@ -23,14 +23,8 @@ public class Ponente {
     private String server, user , bd, pass;
     private ArrayList<Ponente> arreglo;
    
-    public Ponente(){
-        this.server ="localhost";
-        this.user="root";
-        this.pass="";
-        this.bd= "eva";
-        
-    }
-    
+  
+   
     public void con() throws Exception
     {
      try
@@ -66,6 +60,8 @@ public class Ponente {
          
        
      }
+       public Ponente() {
+    }
       
       private int id;
       private String nombrecompleto;
@@ -76,6 +72,23 @@ public class Ponente {
       private String cuenta;
       private String password;
       private String correo;
+      private String ruta;
+
+    public String getRuta() {
+        return ruta;
+    }
+
+    public void setRuta(String ruta) {
+        this.ruta = ruta;
+    }
+      
+      
+    public Ponente( String nombrecompleto , String foto){
+        this.nombrecompleto=nombrecompleto;
+        this.foto = foto;
+        
+    }   
+    
       
      public Ponente(int id , String nombrecompleto , String sexo, String foto , String cv, String nivelacademico, String cuenta , String password , String correo ){
     this.id= id;
@@ -90,6 +103,19 @@ public class Ponente {
     
     
 }
+
+    public Ponente(String nombrecompleto, String sexo, String foto, String cv, String nivelacademico, String cuenta, String password, String correo) {
+        this.nombrecompleto = nombrecompleto;
+        this.sexo = sexo;
+        this.foto = foto;
+        this.cv = cv;
+        this.nivelacademico = nivelacademico;
+        this.cuenta = cuenta;
+        this.password = password;
+        this.correo = correo;
+    }
+     
+     
 
     public String getCuenta() {
         return cuenta;

@@ -7,9 +7,13 @@ package controller;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
-import java.sql.Connection;
+import java.sql.Date;
+
+
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import mantenimientos.GestionPago;
 
 import modelos.Pago;
 
@@ -22,17 +26,17 @@ public class PagoController extends  ActionSupport{
      private  String nombre; 
 private int id;
  private PagoController Pago;
-    private String fechapago;
+    private Date fechapago;
     private int participante_id;
    
 
  private Pago con;
 
-    public String getFechapago() {
+    public Date getFechapago() {
         return fechapago;
     }
 
-    public void setFechapago(String fechapago) {
+    public void setFechapago(Date fechapago) {
         this.fechapago = fechapago;
     }
 
@@ -68,9 +72,7 @@ private int largo;
         this.con = con;
     }
 
-    public ArrayList<Pago> getDatos() {
-        return datos;
-    }
+  
 
     public void setDatos(ArrayList<Pago> datos) {
         this.datos = datos;
@@ -96,7 +98,88 @@ private int largo;
           return SUCCESS;
       }
   
-     
+      private Pago objPag;
+
+    public String ingresar(){
+    objPag = new Pago(fechapago , participante_id );
+    try {
+        GestionPago ac = new GestionPago();
+        ac.RegistrarEntradas(objPag);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "ERROR";
+    }
+    
+    
+}
+    
+    
+    public String  Actualizar(){
+    objPag = new Pago ( fechapago, participante_id);
+    
+    try {
+        GestionPago ac = new GestionPago();
+        ac.Actualizar(objPag, id);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+    
+    }
+    
+//metodo que permite eliminar la actividad a traves de la id
+public String eliminar(){
+    objPag = new Pago (id);
+    
+    try {
+        GestionPago ac = new GestionPago();
+        ac.Eliminar(objPag);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+}
+
+
+    public Pago getObjPag() {
+        return objPag;
+    }
+
+    public void setObjOrg(Pago objPag) {
+        this.objPag = objPag;
+    }
+    
+ 
+    
+   
+
+
+
+
+
+
+    public ArrayList<Pago> getDatos() {
+        return datos;
+    }
+
+ 
+  
+         
+ public String execute1() throws SQLException, Exception {
+         this.datos=new ArrayList<>();
+         this.con=new Pago();
+         this.datos=con.getData("select * from PAGO where id=" +id);
+          
+          return SUCCESS;
+      }
+     public PagoController getOrganizador()
+{
+    return Pago;
+}
+
      public PagoController getPago()
 {
     return Pago;

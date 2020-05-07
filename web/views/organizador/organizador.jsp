@@ -6,14 +6,14 @@
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
          
-        <title  >Ponente</title>
+        <title  >Organizador</title>
     
     </head>
     <body>
         <h1 align="center" >Lista de Organizadores</h1>
         
         <p>
-            <s:a  action ="insertarOrganizador" cssClass="btn btn-success" > Agregar</s:a>
+            <s:a  action ="insertar" cssClass="btn btn-success" > Agregar</s:a>
     </p>
         <table class="table table-bordered">
             <thead> 
@@ -41,13 +41,16 @@
                     <td> <s:property value="telefono" />  </td>
                     <td> <s:property value="direccion" />  </td>
                     <td> 
-                        <s:a action="editar" href="views/categoria/editar.jsp"> 
+                        <s:a action="execute1"> 
                             <s:param name="id" value="id"/>
+                           
                             <i class="btn btn-primary">EDITAR</i> 
                         </s:a>   
-                        <s:a href="views/categoria/eliminar.jsp"> 
+                        <s:a action="eliminar"> 
                                 <s:param name="id" value="id"/>
-                                <i action="execute" class="btn btn-danger">ELIMINAR</i> 
+                                
+                                
+                                <i  class="btn btn-danger">ELIMINAR</i> 
                         </s:a>    
                     </td>
                 </tr>

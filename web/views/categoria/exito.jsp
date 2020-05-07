@@ -28,7 +28,7 @@
         <h4> Descripcion: <s:property value= "objCat.descripcion"/> </h4>
         
                <s:a  action ="regresar" cssClass="btn btn-primary" > Catalogo Categorias</s:a>
-                <s:a  action ="insertarCategoria" cssClass="btn btn-primary" > Registro Nuevo </s:a>
+                <s:a  action ="insertar" cssClass="btn btn-primary" > Registro Nuevo </s:a>
     </center>
     
     </body>

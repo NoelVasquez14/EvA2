@@ -1,17 +1,27 @@
-<%-- 
-    Document   : eliminar
-    Created on : 5/04/2020, 05:45:59 PM
-    Author     : nvasq_
---%>
+<%@taglib uri="/struts-tags" prefix="s" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="s" uri="/struts-tags" %>
 
-<%@page contentType="text/html" pageEncoding="x-MacArabic"%>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=x-MacArabic">
-        <title>JSP Page</title>
-    </head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
+         
+        <title>eliminarCategoria</title>
+    
+   </head>
     <body>
-        <h1>Hello World!</h1>
+     
+    <center>
+        <h1> Registro eliminado con éxito</h1>
+        <h2> Se elimino correctamente la categoria con: </h2>
+        <h4> Id: <s:property value= "objCat.id"/> </h4>
+         
+               <s:a  action ="regresar" cssClass="btn btn-primary" > Catalogo Categorias</s:a>
+                
+    </center>
+    
     </body>
-</html>
+            

@@ -22,6 +22,7 @@
         
     <center>
         <h1> Registro grabado con éxito</h1>
+        
         <h4> Descripcion: <s:property value= "objAct.descripcion"/> </h4>
         
                <s:a  action ="regresar" cssClass="btn btn-primary" > Catalogo Actividades</s:a>

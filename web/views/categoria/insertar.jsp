@@ -18,7 +18,7 @@
 
 <tr>
 <td>
-<s:form action="RegistrarCategoria">    
+<s:form action="Registrar">    
     <s:textfield name="txtdescripcion" label="Descripcion" />
     <s:submit value="Registrar" />
 </s:form>

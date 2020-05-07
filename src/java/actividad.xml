@@ -1,0 +1,48 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    
+   
+    
+    <package name ="actividad" namespace="/actividad" extends= "struts-default">
+        
+        <action name="actividad" class="controller.ActividadController" method="execute"> 
+            <result name="success"> /views/actividad/actividad.jsp </result>
+        
+         </action>
+        <action name= "insertar" >
+            <result > /views/actividad/insertar.jsp</result>       
+        </action>
+         
+        <action name="Registrar" class="controller.ActividadController" method = "ingresar">
+           
+            <result name="exito"> /views/actividad/exito.jsp </result>
+            <result name="error"> /views/actividad/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.ActividadController" method="execute">
+           
+            <result > /views/actividad/actividad.jsp</result> 
+        </action>
+        
+        <action name="execute1" class="controller.ActividadController" method="execute1">
+           
+            <result >/views/actividad/editar.jsp</result> 
+        </action>
+        <action name="eliminarActividad" class="controller.ActividadController" method="eliminar" > 
+            <result name="SUCCESS">/views/actividad/eliminar.jsp  </result>
+        </action>
+     
+         <action name="Actualizar" class="controller.ActividadController" method="Actualizar" > 
+            <result name="SUCCESS">/views/actividad/actividadactualizada.jsp  </result>
+            <result name="error"> /views/actividad/editar.jsp </result>
+        </action>
+        <action name="buscar" class="controller.ActividadController" method="buscar" > 
+            <result name="SUCCESS">/views/actividad/editar.jsp  </result>
+        </action>
+        
+    </package>
+    
+</struts>

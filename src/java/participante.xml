@@ -1,0 +1,43 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    
+   
+   
+    <package name ="participante" namespace="/participante" extends= "struts-default">
+        
+        <action name= "participante" class="controller.ParticipanteController" method="execute" >
+            <result > /views/participante/participante.jsp</result>       
+        </action>
+        <action name= "insertar" >
+            <result > /views/participante/insertar.jsp</result>       
+        </action>
+        
+        
+        <action name="Registrar" class="controller.ParticipanteController" method = "ingresar">
+           
+            <result name="exito"> /views/participante/exito.jsp </result>
+            <result name="error"> /views/participante/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.ParticipanteController" method="execute">
+           
+            <result > /views/participante/participante.jsp</result> 
+        </action>
+      <action name="eliminar" class="controller.ParticipanteController" method="eliminar">
+           
+            <result name="SUCCESS"> /views/participante/eliminar.jsp</result> 
+        </action>
+          <action name="editar" class="controller.ParticipanteController" method="execute1">
+           
+            <result name="SUCCESS"> /views/participante/editar.jsp</result> 
+        </action>
+        <action name="Actualizar" class="controller.ParticipanteController" method="Actualizar" > 
+            <result name="SUCCESS">/views/participante/participanteactualizada.jsp  </result>
+            <result name="error"> /views/participante/editar.jsp </result>
+        </action>
+    </package>
+    
+</struts>

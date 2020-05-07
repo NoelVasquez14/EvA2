@@ -36,13 +36,14 @@ public class CategoriaController_1 extends ActionSupport {
 
    
   
-   private static final long serialVersionUID = 1L;
-  private  String nombre; 
-  private String txtDescuento;
+  private int id;
   private CategoriaController_1 categoria;
+  private ArrayList<Categoria> datos;
   private String descripcion;
 private Categoria objCat;
 private String txtdescripcion;
+
+
 
     public String getTxtdescripcion() {
         return txtdescripcion;
@@ -62,30 +63,12 @@ private String txtdescripcion;
     }
   
 
-    public String getTxtDesc() {
-        return txtDescuento;
-    }
-
-    public void setTxtDesc(String txtDesc) {
-        this.txtDescuento = txtDesc;
-    }
-
-    public String getTxtDescuento() {
-        return txtDescuento;
-    }
-
-    public void setTxtDescuento(String txtDescuento) {
-        this.txtDescuento = txtDescuento;
-    }
-
    
 
-    public String getNombre() {
-        return nombre;
-    }
+    
 
 private Categoria con;
-private ArrayList<Categoria> datos;
+
 private int largo;
 
     public Categoria getCon() {
@@ -113,7 +96,16 @@ private int largo;
         this.largo = largo;
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
+  
  
      @Override    
      public String execute() throws SQLException, Exception {
@@ -121,7 +113,7 @@ private int largo;
          this.datos=new ArrayList<>();
          this.con=new Categoria();
          this.datos=con.getData("select * from Categoria");
-          return SUCCESS;
+          return "SUCCESS";
       }
      public CategoriaController_1 getUsuario()
 {
@@ -143,6 +135,40 @@ public String ingresar(){
     
 }
 
+public String execute1() throws SQLException, Exception {
+         this.datos=new ArrayList<>();
+         this.con=new Categoria();
+         this.datos=con.getData("select * from CATEGORIA where id=" +id);
+          
+          return SUCCESS;
+      }
+
+public String  Actualizar(){
+    objCat = new Categoria (txtdescripcion);
+    
+    try {
+        GestionCategoria ac = new GestionCategoria();
+        ac.Actualizar(objCat , id);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+    
+    
+    }
+public String eliminar(){
+    objCat = new Categoria (id);
+    
+    try {
+        GestionCategoria ac = new GestionCategoria();
+        ac.Eliminar(objCat);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+}
     public Categoria getObjCat() {
         return objCat;
     }

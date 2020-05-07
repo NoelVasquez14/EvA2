@@ -6,6 +6,7 @@
 package modelos;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -57,7 +58,7 @@ public class Pago {
          
          while(this.datos.next())
          {
-             this.arreglo.add(new Pago(datos.getInt("id"),datos.getString("fechapago"), 
+             this.arreglo.add(new Pago(datos.getInt("id"),datos.getDate("fechapago"), 
               datos.getInt("participante_id")));
          }
          
@@ -67,16 +68,27 @@ public class Pago {
      }
       
       private int id;
-      private String fechapago;
+      private Date fechapago;
       private int participante_id;
       
       
-     public Pago(int id , String fechapago , int participante_id ){
+     public Pago(int id, Date fechapago , int participante_id ){
     this.id= id;
     this.fechapago=fechapago;
     this.participante_id=participante_id;
     
 }
+
+    public Pago(Date fechapago, int participante_id) {
+        this.fechapago = fechapago;
+        this.participante_id = participante_id;
+    }
+     
+
+    public Pago(int id) {
+        this.id = id;
+    }
+     
 
     public int getParticipante_id() {
         return participante_id;
@@ -97,11 +109,11 @@ public class Pago {
         this.id = id;
     }
 
-    public String getFechapago() {
+    public Date getFechapago() {
         return fechapago;
     }
 
-    public void setFechapago(String fechapago) {
+    public void setFechapago(Date fechapago) {
         this.fechapago = fechapago;
     }
 

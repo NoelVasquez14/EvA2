@@ -22,6 +22,12 @@ public class Participante {
     private ResultSet datos;
     private String server, user , bd, pass;
     private ArrayList<Participante> arreglo;
+    private String nombrecompleto;
+    private String curp;
+    private String intitucionprocedencia;
+    public String cuenta;
+    public String password;
+    
    
     public Participante(){
         this.server ="localhost";
@@ -68,25 +74,11 @@ public class Participante {
      }
       
       private int id;
-      private String nombrecompleto;
-      private String curp;
-      private String intitucionprocedencia;
-      private String cuenta;
-      private String password;
-      private String correo;
       
-     public Participante(int id , String nombrecompleto , String curp, String intitucionprocedencia,  String cuenta , String password  ){
-    this.id= id;
-    this.nombrecompleto=nombrecompleto;
-    this.curp= curp;
-    this.intitucionprocedencia=intitucionprocedencia;
-    this.cuenta=cuenta;
-    this.password=password;
- 
-    
-    
-}
 
+   
+      
+      
     public String getCurp() {
         return curp;
     }
@@ -135,8 +127,33 @@ public class Participante {
         this.nombrecompleto = nombrecompleto;
     }
 
-   
+    public Participante(int id) {
+        this.id = id;
+    }
+
+    
+    
+ public Participante(String nombrecompleto, String curp, String intitucionprocedencia, String cuenta, String password) {
+        this.nombrecompleto = nombrecompleto;
+        this.curp = curp;
+        this.intitucionprocedencia = intitucionprocedencia;
+        this.cuenta = cuenta;
+        this.password = password;
+    }  
 
   
+      
+     public Participante(int id , String nombrecompleto , String curp, String intitucionprocedencia,  String cuenta , String password  ){
+    this.id= id;
+    this.nombrecompleto=nombrecompleto;
+    this.curp= curp;
+    this.intitucionprocedencia=intitucionprocedencia;
+    this.cuenta=cuenta;
+    this.password=password;
+ 
+    
+    
+}
+ 
       
 }

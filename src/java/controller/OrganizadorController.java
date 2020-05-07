@@ -11,6 +11,9 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import mantenimientos.GestionOrganizador;
+
+
 import modelos.Organizador;
 
 
@@ -22,15 +25,132 @@ public class OrganizadorController extends  ActionSupport{
      private  String nombre; 
 private int id;
  private OrganizadorController Organizador;
-    private String nombrecompleto;
-    private String sexo;
-    private String cv;
-    private String foto;
-    private String cuenta; 
-    private String password;
-    private String correo;
-    private String nivelacademico;
+    private String txtnombreorazonsocial;
+    private String txtrfc;
+    private String txtcontacto;
+    private String txturl;
+    private String txtcorreo; 
+    private String txttelefono;
+    private String txtdireccion;
+   
+ 
+    private Organizador objOrg;
 
+    public String ingresar(){
+    objOrg = new Organizador(txtnombreorazonsocial , txtrfc, txtcontacto, txturl , txtcorreo, txttelefono, txtdireccion );
+    try {
+        GestionOrganizador ac = new GestionOrganizador();
+        ac.RegistrarEntradas(objOrg);
+        return "exito";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+    
+    
+}
+    
+    
+    public String  Actualizar(){
+    objOrg = new Organizador (txtnombreorazonsocial,txtrfc ,txtcontacto,txturl,txtcorreo,txttelefono,txtdireccion);
+    
+    try {
+        GestionOrganizador ac = new GestionOrganizador();
+        ac.Actualizar(objOrg, id);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+    
+    }
+    
+//metodo que permite eliminar la actividad a traves de la id
+public String eliminar(){
+    objOrg = new Organizador (id);
+    
+    try {
+        GestionOrganizador ac = new GestionOrganizador();
+        ac.Eliminar(objOrg);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+}
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getTxtnombreorazonsocial() {
+        return txtnombreorazonsocial;
+    }
+
+    public void setTxtnombreorazonsocial(String txtnombreorazonsocial) {
+        this.txtnombreorazonsocial = txtnombreorazonsocial;
+    }
+
+    public String getTxtrfc() {
+        return txtrfc;
+    }
+
+    public void setTxtrfc(String txtrfc) {
+        this.txtrfc = txtrfc;
+    }
+
+    public String getTxtcontacto() {
+        return txtcontacto;
+    }
+
+    public void setTxtcontacto(String txtcontacto) {
+        this.txtcontacto = txtcontacto;
+    }
+
+    public String getTxturl() {
+        return txturl;
+    }
+
+    public void setTxturl(String txturl) {
+        this.txturl = txturl;
+    }
+
+    public String getTxtcorreo() {
+        return txtcorreo;
+    }
+
+    public void setTxtcorreo(String txtcorreo) {
+        this.txtcorreo = txtcorreo;
+    }
+
+    public String getTxttelefono() {
+        return txttelefono;
+    }
+
+    public void setTxttelefono(String txttelefono) {
+        this.txttelefono = txttelefono;
+    }
+
+    public String getTxtdireccion() {
+        return txtdireccion;
+    }
+
+    public void setTxtdireccion(String txtdireccion) {
+        this.txtdireccion = txtdireccion;
+    }
+
+    public Organizador getObjOrg() {
+        return objOrg;
+    }
+
+    public void setObjOrg(Organizador objOrg) {
+        this.objOrg = objOrg;
+    }
+    
  private Organizador con;
     public int getId() {
         return id;
@@ -40,74 +160,7 @@ private int id;
         this.id = id;
     }
 
-    public String getNombrecompleto() {
-        return nombrecompleto;
-    }
-
-    public void setNombrecompleto(String nombrecompleto) {
-        this.nombrecompleto = nombrecompleto;
-    }
-
-    public String getSexo() {
-        
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
-
-    public String getCv() {
-        return cv;
-    }
-
-    public void setCv(String cv) {
-        this.cv = cv;
-    }
-
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
-    public String getCuenta() {
-        return cuenta;
-    }
-
-    public void setCuenta(String cuenta) {
-        this.cuenta = cuenta;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getCorreo() {
-        return correo;
-    }
-
-    public void setCorreo(String correo) {
-        this.correo = correo;
-    }
-
-    public String getNivelacademico() {
-        return nivelacademico;
-    }
-
-    public void setNivelacademico(String nivelacademico) {
-        this.nivelacademico = nivelacademico;
-    }
-    public String getNombre() {
-        return nombre;
-    }
-
+   
 
 private ArrayList<Organizador> datos;
 
@@ -150,7 +203,14 @@ private int largo;
           return SUCCESS;
       }
   
-     
+         
+ public String execute1() throws SQLException, Exception {
+         this.datos=new ArrayList<>();
+         this.con=new Organizador();
+         this.datos=con.getData("select * from ORGANIZADOR where id=" +id);
+          
+          return SUCCESS;
+      }
      public OrganizadorController getOrganizador()
 {
     return Organizador;

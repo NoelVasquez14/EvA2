@@ -7,10 +7,9 @@ package controller;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
-
+import mantenimientos.GestionParticipante;
 import modelos.Participante;
 
 
@@ -22,29 +21,73 @@ public class ParticipanteController extends  ActionSupport{
      private  String nombre; 
 private int id;
  private ParticipanteController Participante;
-    private String nombrecompleto;
-   private String curp;
-   private String intitucionprocedencia;
-    private String cuenta; 
-    private String password;
+    private String txtnombre;
+   private String txtcurp;
+   private String txtinstitucion;
+    private String txtcuenta; 
+    private String txtpassword;
+  private Participante objPar;
+  
+  
+    
+     public String ingresar(){
+    objPar = new Participante(txtnombre , txtcurp, txtinstitucion, txtcuenta , txtpassword);
+    try {
+        GestionParticipante ac = new GestionParticipante();
+        ac.RegistrarParticipante(objPar);
+        return "exito";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+   }
+    
+   
+//metodo para editar datos de la tabla actividad
+    public String  Actualizar(){
+    objPar = new Participante(txtnombre,txtcurp,txtinstitucion,txtcuenta,txtpassword);
+    
+    try {
+        GestionParticipante ac= new GestionParticipante();
+        ac.Actualizar(objPar , id);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+    
+    
+    }
+    
+//metodo que permite eliminar la actividad a traves de la id
+public String eliminar(){
+    objPar = new Participante(id);
+    
+    try {
+        GestionParticipante ac = new GestionParticipante();
+        ac.Eliminar(objPar);
+        return "SUCCESS";
+    } catch (Exception e){
+        e.printStackTrace();
+        return "error";
+    }
+}
+public String execute1() throws SQLException, Exception {
+         this.datos=new ArrayList<>();
+         this.con=new Participante();
+         this.datos=con.getData("select * from PARTICIPANTE where id=" +id);
+          
+          return "SUCCESS";
+      }
+
+
+    public void setParticipante(ParticipanteController Participante) {
+        this.Participante = Participante;
+    }
+
   
 
-    public String getCurp() {
-        return curp;
-    }
-
-    public void setCurp(String curp) {
-        this.curp = curp;
-    }
-
-    public String getIntitucionprocedencia() {
-        return intitucionprocedencia;
-    }
-
-    public void setIntitucionprocedencia(String intitucionprocedencia) {
-        this.intitucionprocedencia = intitucionprocedencia;
-    }
- 
+  
 
  private Participante con;
     public int getId() {
@@ -53,40 +96,6 @@ private int id;
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public String getNombrecompleto() {
-        return nombrecompleto;
-    }
-
-    public void setNombrecompleto(String nombrecompleto) {
-        this.nombrecompleto = nombrecompleto;
-    }
-
- 
-
-
-    public String getCuenta() {
-        return cuenta;
-    }
-
-    public void setCuenta(String cuenta) {
-        this.cuenta = cuenta;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    
-
- 
-    public String getNombre() {
-        return nombre;
     }
 
 
@@ -120,7 +129,48 @@ private int largo;
         this.largo = largo;
     }
 
+    public String getTxtnombre() {
+        return txtnombre;
+    }
 
+    public void setTxtnombre(String txtnombre) {
+        this.txtnombre = txtnombre;
+    }
+
+    public String getTxtcurp() {
+        return txtcurp;
+    }
+
+    public void setTxtcurp(String txtcurp) {
+        this.txtcurp = txtcurp;
+    }
+
+    public String getTxtinstitucion() {
+        return txtinstitucion;
+    }
+
+    public void setTxtinstitucion(String txtinstitucion) {
+        this.txtinstitucion = txtinstitucion;
+    }
+
+    public String getTxtcuenta() {
+        return txtcuenta;
+    }
+
+    public void setTxtcuenta(String txtcuenta) {
+        this.txtcuenta = txtcuenta;
+    }
+
+    public String getTxtpassword() {
+        return txtpassword;
+    }
+
+    public void setTxtpassword(String txtpassword) {
+        this.txtpassword = txtpassword;
+    }
+ 
+
+ 
  
      @Override    
      public String execute() throws SQLException, Exception {
@@ -132,9 +182,14 @@ private int largo;
       }
   
      
-     public ParticipanteController getParticipante()
-{
-    return Participante;
-}
 
+
+  public Participante getObjPar() {
+        return objPar;
+    }
+
+    public void setObjPar(Participante objPar) {
+        this.objPar = objPar;
+    }
+ 
 }

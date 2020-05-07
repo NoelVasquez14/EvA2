@@ -14,7 +14,7 @@
         <h1>Lista de actividade</h1>
         
         <p>
-       <s:a   cssClass="btn btn-success" action="insertarActividad"> Agregar</s:a>
+       <s:a   cssClass="btn btn-success" action="insertar" > Agregar</s:a>
     </p>
         <table class="table table-bordered">
             <thead> 
@@ -27,13 +27,13 @@
                 <tr>
                     <td> <s:property value="id" />  </td>
                     <td> <s:property value="descripcion" />  </td>
-                    <td> <s:a action="editar" > 
+                    <td> <s:a action="execute1" > 
                             <s:param name="id" value="id"/>
                             <i class="btn btn-primary">EDITAR</i> 
                         </s:a>   
-                        <s:a action="eliminar"> 
+                        <s:a action="eliminarActividad"> 
                                 <s:param name="id" value="id"/>
-                                <i action="eliminar" class="btn btn-danger">ELIMINAR</i> 
+                                <i  class="btn btn-danger">ELIMINAR</i> 
                         </s:a> 
                     </td>
                 </tr>

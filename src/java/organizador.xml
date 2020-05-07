@@ -1,0 +1,43 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    
+   
+    <package name ="organizador" namespace="/organizador" extends= "struts-default">
+        <action name="organizador" class="controller.OrganizadorController" method = "execute">
+           
+            <result > /views/organizador/organizador.jsp </result>
+           
+        </action>
+        <action name= "insertar" >
+            <result > /views/organizador/insertar.jsp</result>       
+        </action>
+        
+        
+        <action name="Registrar" class="controller.OrganizadorController" method = "ingresar">
+           
+            <result name="exito"> /views/organizador/exito.jsp </result>
+            <result name="error"> /views/organizador/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.OrganizadorController" method="execute">
+           
+            <result > /views/organizador/organizador.jsp</result> 
+        </action>
+        
+       <action name="execute1" class="controller.OrganizadorController" method="execute1">
+           
+            <result >/views/organizador/editar.jsp</result> 
+        </action>
+        <action name="eliminar" class="controller.OrganizadorController" method="eliminar" > 
+            <result name="SUCCESS">/views/organizador/eliminar.jsp  </result>
+        </action>
+     
+         <action name="Actualizar" class="controller.OrganizadorController" method="Actualizar" > 
+            <result name="SUCCESS">/views/organizador/organizadoractualizada.jsp  </result>
+            <result name="error"> /views/organizador/editar.jsp </result>
+        </action>
+    </package>
+</struts>

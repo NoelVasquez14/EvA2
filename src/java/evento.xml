@@ -1,0 +1,43 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    
+   
+    <package name ="evento" namespace="/evento" extends= "struts-default">
+        <action name="evento" class="controller.EventoController" method = "execute">
+           
+            <result > /views/evento/evento.jsp </result>
+           
+        </action>
+        <action name= "insertar" >
+            <result > /views/evento/insertar.jsp</result>       
+        </action>
+        
+        
+        <action name="Registrar" class="controller.EventoController" method = "ingresar">
+           
+            <result name="exito"> /views/evento/exito.jsp </result>
+            <result name="error"> /views/evento/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.EventoController" method="execute">
+           
+            <result > /views/evento/evento.jsp</result> 
+        </action>
+        
+       <action name="execute1" class="controller.OrganizadorController" method="execute1">
+           
+            <result >/views/organizador/editar.jsp</result> 
+        </action>
+        <action name="eliminar" class="controller.EventoController" method="eliminar" > 
+            <result name="SUCCESS">/views/evento/eliminar.jsp  </result>
+        </action>
+     
+         <action name="Actualizar" class="controller.OrganizadorController" method="Actualizar" > 
+            <result name="SUCCESS">/views/organizador/organizadoractualizada.jsp  </result>
+            <result name="error"> /views/organizador/editar.jsp </result>
+        </action>
+    </package>
+</struts>

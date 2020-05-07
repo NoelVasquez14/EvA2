@@ -1,0 +1,45 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    
+    
+    <package name ="categoria" namespace="/categoria" extends= "struts-default">
+        <action name="categoria" class="controller.CategoriaController_1" method="execute"> 
+            <result name="SUCCESS"> /views/categoria/categoria.jsp </result>
+        
+         </action>
+        <action name= "insertar" >
+            <result > /views/categoria/insertar.jsp</result>       
+        </action>
+         
+        <action name="Registrar" class="controller.CategoriaController_1" method = "ingresar">
+           
+            <result name="exito"> /views/categoria/exito.jsp </result>
+            <result name="error"> /views/categoria/error.jsp </result>
+        </action>
+        <action name="regresar" class="controller.CategoriaController_1" method="execute">
+           
+            <result name="SUCCESS" > /views/categoria/categoria.jsp</result> 
+        </action>
+        
+        <action name="execute1" class="controller.CategoriaController_1" method="execute1">
+           
+            <result >/views/categoria/editar.jsp</result> 
+        </action>
+        <action name="eliminar" class="controller.CategoriaController_1" method="eliminar" > 
+            <result name="SUCCESS">/views/categoria/eliminar.jsp  </result>
+        </action>
+     
+         <action name="Actualizar" class="controller.CategoriaController_1" method="Actualizar" > 
+            <result name="SUCCESS">/views/categoria/categoriaactualizada.jsp  </result>
+            <result name="error"> /views/categoria/editar.jsp </result>
+        </action>
+
+      
+    </package>
+    
+    
+</struts>
