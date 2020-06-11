@@ -4,32 +4,15 @@
  * and open the template in the editor.
  */
 package controller;
-import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+;
 import modelos.Categoria;
 import com.opensymphony.xwork2.ActionSupport;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.sql.PreparedStatement;
 
 
-import modelos.Actividad;
-import java.sql.Connection;
-import java.sql.DriverManager;
-
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-import javax.xml.ws.Action;
-import mantenimientos.GestionActividad;
 import mantenimientos.GestionCategoria;
-import modelos.Conectar;
-import org.apache.struts2.convention.annotation.Namespace;
-import org.apache.struts2.convention.annotation.Result;
+
 
 
 public class CategoriaController_1 extends ActionSupport {
@@ -39,29 +22,22 @@ public class CategoriaController_1 extends ActionSupport {
   private int id;
   private CategoriaController_1 categoria;
   private ArrayList<Categoria> datos;
-  private String descripcion;
-private Categoria objCat;
-private String txtdescripcion;
-
-
-
-    public String getTxtdescripcion() {
-        return txtdescripcion;
-    }
-
-    public void setTxtdescripcion(String txtdescripcion) {
-        this.txtdescripcion = txtdescripcion;
-    }
  
+private Categoria objCat;
+private String descripcion;
 
     public String getDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(String Descripcio) {
-        this.descripcion = Descripcio;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
-  
+
+
+
+
+   
 
    
 
@@ -122,7 +98,7 @@ private int largo;
 
   
 public String ingresar(){
-    objCat = new Categoria (txtdescripcion);
+    objCat = new Categoria (descripcion);
     try {
         GestionCategoria ac = new GestionCategoria();
         ac.RegistrarCategoria(objCat);
@@ -144,7 +120,7 @@ public String execute1() throws SQLException, Exception {
       }
 
 public String  Actualizar(){
-    objCat = new Categoria (txtdescripcion);
+    objCat = new Categoria (descripcion);
     
     try {
         GestionCategoria ac = new GestionCategoria();

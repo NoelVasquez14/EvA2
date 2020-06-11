@@ -17,7 +17,13 @@
         <title>PARTICIPANTE</title>
     
    </head>
-    <body>
+    <body style="background: coral">
+       
+       <p>
+        <p>
+            <br>
+            <br>
+            <br> 
      
     <center>
         <h1> Registro eliminado con éxito</h1>

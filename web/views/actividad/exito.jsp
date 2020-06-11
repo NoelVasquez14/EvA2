@@ -17,7 +17,7 @@
         <title>Actividad</title>
     
    </head>
-    <body>
+    <body style="background: coral">
        
         
     <center>

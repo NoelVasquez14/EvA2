@@ -9,21 +9,31 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  /> 
+          
         <title>Registro Categoria</title>
-</head>
-<body>
-<div align="center">
-<table>
+    </head> 
+    <body style="background: coral">
+       
+       <p>
+        <p>
+            <br>
+            <br>
+            <br> 
+        <div align="center" >
 
-<tr>
-<td>
-<s:form action="Registrar">    
-    <s:textfield name="txtdescripcion" label="Descripcion" />
-    <s:submit value="Registrar" />
-</s:form>
 
-    
-</div>
+            <tr>
+                <td>
+                    <fieldset align="center" style="width: 300px" class="table ">
+                        <s:form action="Registrar" align="center"  style="background:  " >    
+                            <legend style="width: 300px">INSERTAR CATEGORIA  </legend>
+                            <s:textfield name="descripcion" label="Descripcion" />
+                            <s:submit value="Registrar" />
+                        </s:form>
+
+
+                    </fieldset>  
+        </div>
     </body>
 </html>

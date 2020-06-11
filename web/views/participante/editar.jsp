@@ -10,23 +10,31 @@
         <title>Editar</title>
 </head>
 
-<body>
-
+<body style="background: coral">
+       
+       <p>
+        <p>
+            <br>
+            <br>
+            <br> 
     <div align="center">
         <fieldset style="width: 300px"> 
             <legend>Actualizar Participante</legend>
             <s:form action="Actualizar">   
+                <s:iterator var="dato" value="datos" >
                 <s:textfield name="id" label="ID" />
-                <s:textfield  label="NOMBRE COMPLETO" name="txtnombre"></s:textfield>
-                <s:textfield  label="RFC" name="txtcurp"></s:textfield>
-                <s:textfield  label="CONTACTO" name="txtinstitucion"></s:textfield>
-                <s:textfield  label="URL" name="txtcuenta"></s:textfield>
-                <s:password  label="CORREO" name="txtpassword"></s:password>
+                <s:textfield  label="NOMBRE COMPLETO" name="nombrecompleto"></s:textfield>
+                <s:textfield  label="RFC" name="curp"></s:textfield>
+                <s:textfield  label="Intitucion de procedencia" name="intitucionprocedencia"></s:textfield>
+                <s:textfield  label="Cuenta" name="cuenta"></s:textfield>
+                <s:password  label="Password" name="password"></s:password>
                
                       
                      
                  
                 <s:submit  value="Registrar" />
+                </s:iterator>
+                
             </s:form>
 
         </fieldset> 

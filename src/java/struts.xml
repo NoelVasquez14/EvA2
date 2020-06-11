@@ -11,6 +11,8 @@
     <include file="evento.xml" />
     <include file="pago.xml" />
     <include file="catalogo.xml" />
+    <include file="horario.xml" />
+ 
     <!-- Configuration for the default package. -->
     <package name="default" extends="struts-default">
             <!--   <action name="registrar" class="controller.ActividadController" method="execute1" >
@@ -28,13 +30,23 @@
             <result name="SUCCESS"> /views/categoria/categoria.jsp</result>      
              <result name="error"> error.jsp</result>    
         </action>
+      
         
+        <action name= "horario" class="controller.HorarioController" method="execute" >
+            <result name="SUCCESS"> /views/horario/horario.jsp</result>      
+             <result name="error"> error.jsp</result>    
+        </action>
 
         <action name= "catalogo" class="controller.CatalogoController" method="execute" >
             <result name="SUCCESS"> /views/catalogo/catalogo.jsp</result>      
              <result name="error"> error.jsp</result>    
         
          
+         </action>
+         
+          <action name= "login1" >
+             <result > /login.jsp </result>
+             
          </action>
        <action name= "participante" class="controller.ParticipanteController" method="execute">
              <result name="success"> /views/participante/participante.jsp </result>
@@ -44,7 +56,19 @@
             <result name="succes"> /views/inicio/bienvenido.jsp</result>      
              <result name="error"> login.jsp</result>    
         </action>
+        <action name= "login1" >
+             <result > /views/login/bienvenidoFacebook.jsp</result>
+             
+         </action>
         
+        <action name= "menu"  >
+            <result > /views/inicio/bienvenido.jsp</result>      
+           
+        </action>
+        <action name= "menu2"  >
+            <result > /views/inicio/bienvenido_1.jsp</result>      
+           
+        </action>
         
         <action name="organizador" class="controller.OrganizadorController" method="execute"> 
             <result name="success"> /views/organizador/organizador.jsp </result>
@@ -53,7 +77,7 @@
             <result name="success"> /views/pago/pago.jsp </result>
         </action>
         <action name="actividad" class="controller.ActividadController" method="execute"> 
-            <result name="success"> /views/actividad/actividad.jsp </result>
+            <result name="SUCCESS"> /views/actividad/actividad.jsp </result>
         </action>
         <action name="evento" class="controller.EventoController" method="execute"> 
             <result name="success"> /views/evento/evento.jsp </result>

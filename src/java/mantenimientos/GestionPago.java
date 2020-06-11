@@ -25,7 +25,7 @@ private int id;
          cnx = MySqlConexion.getConection();
          String sql = "INSERT INTO PAGO( fechaPago , participante_id ) VALUES (? ,?)";
          pstm = cnx.prepareStatement(sql);
-         pstm.setDate(1, (Date) data.getFechapago());
+         pstm.setDate(1,  data.getFechapago());
          pstm.setInt(2,data.getParticipanteId());
         
          
@@ -100,7 +100,7 @@ private int id;
          
          pstm = cnx.prepareStatement(sql);
        
-         pstm.setDate(1, (Date) data.getFechapago());
+         pstm.setDate(1,  data.getFechapago());
          pstm.setInt(2,data.getParticipante_id());
         
          

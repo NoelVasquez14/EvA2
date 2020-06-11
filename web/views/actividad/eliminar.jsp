@@ -17,12 +17,12 @@
         <title>Actividad</title>
     
    </head>
-    <body>
+    <body style="background: coral">
      
     <center>
         <h1> Registro eliminado con éxito</h1>
         <h2> Se elimino correctamente la actividad con: </h2>
-        <h4> Id: <s:property value= "objAct1.id"/> </h4>
+        <h4> Id: <s:property value= "objAct.id"/> </h4>
                <s:a  action ="regresar" cssClass="btn btn-primary" > Catalogo Actividades</s:a>
                 
     </center>

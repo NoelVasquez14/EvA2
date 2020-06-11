@@ -28,7 +28,7 @@
 
 <struts-config>
     <form-beans>
-    
+      
     </form-beans>
     
     <global-exceptions>
@@ -41,6 +41,7 @@
 
     <action-mappings>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
+        
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

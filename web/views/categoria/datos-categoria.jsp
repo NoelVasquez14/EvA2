@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-       Nombre: <strong><s:property value="categoria.descripcion" /></strong> <br />
+       Nombre: <strong><s:property value="objCat.descripcion" /></strong> <br />
     </body>
 </html>

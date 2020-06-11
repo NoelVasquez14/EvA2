@@ -25,9 +25,8 @@
         <legend>Registrar Organizador</legend>
 <s:form action="Registrar"> 
     
-  
-    <input id="fechapago" name="fechapago" type="date" format="YYYY-MM-dd"/> 
-    <td> <s:textfield label="idparticipante" name="participante_id" /> </td>
+    <s:textfield  name="fechapago"  type="date" label="fechapago" format="YYYY-MM-dd" />
+    <s:textfield label="idparticipante" name="participante_id" /> 
    
     
     <s:submit  value="Registrar" />

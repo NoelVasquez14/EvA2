@@ -21,7 +21,7 @@ import utils.MySqlConexion;
 public class GestionActividad {
     private ArrayList<Actividad> datos;
     private int id;
-    private String txtdescripcion;
+    private String descripcion;
     public void RegistrarEntradas(Actividad data){
      Connection cnx= null;
      PreparedStatement pstm = null;

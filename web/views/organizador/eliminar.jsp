@@ -17,7 +17,7 @@
         <title>Organizador</title>
     
    </head>
-    <body>
+   <body style="background: coral" >
      
     <center>
         <h1> Registro eliminado con éxito</h1>

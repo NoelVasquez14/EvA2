@@ -8,7 +8,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
         <title>Registro Evento</title>
 </head>
-<body>
+<body style="background: coral">
+       
+       <p>
+        <p>
+            <br>
+            <br>
+            <br> 
 <div align="center">
 <table>
 
@@ -18,24 +24,19 @@
         <legend>Registrar Evento</legend>
 <form action="Registrar">    
     
-    <s:textfield  label="Titulo" name="titulo" ></s:textfield>
-    <s:textfield  label="descripcion" name="descripcion"></s:textfield>
-    <td>  <label>Fecha inicio:</label>
-            <input type="date" name="fechainicio" > </td>
-        <td>  <label>Fecha final:</label>
-            <input type="date" name="fechafin" > </td>
-
-    <s:textfield  label="Observaciones" name="observaciones"></s:textfield>
-    <s:textfield  label="Logotipo" name="logotipo"></s:textfield>
-    <s:textfield  label="Eslogan" name="slogan"></s:textfield>
-    <s:textfield  label="Lugar" name="lugar"></s:textfield>
+    <s:textfield  label="Titulo" name="titulo"  required="true" ></s:textfield>
+    <s:textfield  label="descripcion" name="descripcion" required="true"></s:textfield>
+    <s:textfield label="fechainicio"  name="fechainicio" type="datetime-local" required="true"/>
+    <s:textfield label="fechainicio"  name="fechafin" type="datetime-local" required="true"/>
+    <s:textfield  label="Observaciones" name="observaciones" required="true"></s:textfield>
+    <s:textfield  label="Logotipo" name="logotipo"  required="true"></s:textfield>
+    <s:textfield  label="Eslogan" name="slogan" required="true"></s:textfield>
+    <s:textfield  label="Lugar" name="lugar"  required="true"></s:textfield>
     
-    <s:textfield  label="Id Categoria" name="categoria_id"></s:textfield>
-        <td>  <label> inicio de registro:</label>
-            <input type="date" name="inicioregistro" > </td>
-      <td>  <label>Fecha inicio:</label>
-          <input type="date" name="cierreregistro" > </td>
-    <s:textfield label="Id Organizador" name="id_organizador"></s:textfield>
+    <s:textfield  label="Id Categoria" name="categoria_id" required="true"></s:textfield>
+      <s:textfield label="Inicio Registro"  name="inicioregistro" type="datetime-local" required="true"/>
+    <s:textfield label="Cierre registo"  name="cierreregistro" type="datetime-local" required="true" />
+    <s:textfield label="Id Organizador" name="id_organizador" required="true"></s:textfield>
     <s:submit  value="Registrar" />
 <form>
 

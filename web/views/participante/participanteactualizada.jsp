@@ -14,10 +14,16 @@
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
          
-        <title>Actividad</title>
+        <title>participante</title>
     
    </head>
-    <body>
+    <body style="background: coral">
+       
+       <p>
+        <p>
+            <br>
+            <br>
+            <br> 
        
         
     <center>

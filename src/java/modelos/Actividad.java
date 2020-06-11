@@ -11,8 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import controller.ActividadController;
-import utils.MySqlConexion;
+
 /**
  *
  * @author nvasq_
@@ -21,20 +20,22 @@ import utils.MySqlConexion;
 
 public class Actividad {
     
-      private String descripcion;
- private Connection con;
+     private Connection con;
+
+    public Connection getCon() {
+        return con;
+    }
+
+    public void setCon(Connection con) {
+        this.con = con;
+    }
     private PreparedStatement consultas;
+     private PreparedStatement tsnt;
     private ResultSet datos;
     private String server, user , bd, pass;
-    private ArrayList<Categoria> arreglo;
-    private ArrayList<Actividad> arreglo1;
-    private Actividad a;
-    
-     private int id;
- 
-   
-     
-     
+    private ArrayList<Actividad> arreglo;
+    private String actividad;
+  private Actividad objAct;
     
     public Actividad(){
         this.server ="localhost";
@@ -44,29 +45,25 @@ public class Actividad {
         
     }
 
-    public Actividad(int id, String txtdescripcion) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Actividad getObjAct() {
+        return objAct;
     }
 
-    public int getId() {
-        return id;
+    public void setObjAct(Actividad objAct) {
+        this.objAct = objAct;
+    }
+    
+    
+    
+    
+    public String getActividad() {
+        return actividad;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCategoria(String actividad) {
+        this.actividad = actividad;
     }
 
-    public Actividad(int id) {
-        this.id = id;
-    }
- 
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
     
     public void con() throws Exception
     {
@@ -85,7 +82,7 @@ public class Actividad {
          this.con.close();
      } 
    
-      public ArrayList<Categoria> getData(String sql) throws SQLException, Exception
+      public ArrayList<Actividad> getData(String sql) throws SQLException, Exception
      {
          this.arreglo= new ArrayList<>();
          this.con();
@@ -94,7 +91,7 @@ public class Actividad {
          
          while(this.datos.next())
          {
-             this.arreglo.add(new Categoria(datos.getInt("id"),datos.getString("descripcion")));
+             this.arreglo.add(new Actividad(datos.getInt("id"),datos.getString("descripcion")));
          }
          
          return this.arreglo;
@@ -102,76 +99,69 @@ public class Actividad {
        
      }
 
-    public Actividad(String descripcion, int id) {
-        this.descripcion = descripcion;
+    private int id;
+    private String descripcion;
+
+    public Actividad(int id) {
         this.id = id;
-    }
-      //metodo para 0btenerdatos por id
-      
-      public ArrayList<Categoria> getDatos(String sql) throws SQLException, Exception{
-    /*   this.arreglo= new ArrayList<>();
-       Connection cnx= null;
-     PreparedStatement pstm = null;
-         cnx = MySqlConexion.getConection();
-         this.consultas=cnx.prepareStatement(sql);
-         this.datos=this.consultas.executeQuery();
-         
-             this.arreglo.add(new Actividad(datos.getInt("id"),datos.getString("descripcion")));
-         
-         
-        return this.arreglo;
-          
-      */ 
-     this.arreglo= new ArrayList<>();
-         this.con();
-         this.consultas=this.con.prepareStatement(sql);
-         this.datos=this.consultas.executeQuery();
-         
-         while(this.datos.next())
-         {
-             this.arreglo.add(new Categoria(datos.getInt("id"),datos.getString("descripcion")));
-         }
-         
-         return this.arreglo;
-         
-    }
-      
-    public Actividad( String descripcion) {
-        
-        this.descripcion = descripcion;
     }
     
-    public class Categoria {
-   
-   public int id;
-   public String descripcion;
 
-    public Categoria(int id, String descripcion) {
+    public Actividad(int id, String descripcion) {
         this.id = id;
         this.descripcion = descripcion;
     }
 
-        public String getDescripcion() {
-            return descripcion;
-        }
-
-        public void setDescripcion(String descripcion) {
-            this.descripcion = descripcion;
-        }
-      
-     
-
-    public Categoria() {
-    }
-
+   
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }  
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+    
+    
+    /*
+public static boolean agregarCategoria(CategoriaController_1  descripcion){
+  boolean agregado=false;
+  try {
+   Conectar c=new Conectar();
+   Connection con=c.getCon();
+   if(con!=null){
+    Statement st;
+    st = con.createStatement();
+    st.executeUpdate("INSERT INTO categoria VALUES (?)");
+    agregado=true;
+    st.close();
+   }
+   c.desconectar();
+  } catch (SQLException e) {
+   agregado=false;
+   e.printStackTrace();
+  }
+  
+  return agregado;
+ }
+
+ */
+
+    public Actividad(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+       
+      
+     
+
    
 }
     
-}

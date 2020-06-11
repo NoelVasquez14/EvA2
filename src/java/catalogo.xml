@@ -10,7 +10,7 @@
        
         <action name="catalogo" class="controller.CatalogoController" method = "execute">
            
-            <result > /views/catalogo/catalogo.jsp </result>    
+            <result name="SUCCESS" > /views/catalogo/catalogo.jsp </result>    
         </action>
         
         
@@ -22,24 +22,28 @@
         <action name="Registrar" class="controller.CatalogoController" method = "ingresar">
            
             <result name="exito"> /views/catalogo/exito.jsp </result>
-            <result name="error"> /views/catalogo/error.jsp </result>
+            <result name="error"> /views/catalogo/insertar.jsp </result>
         </action>
-         <action name="regresar" class="controller.CatalogoController" method = "execute">
+         <action name="regresar" class="controller.CatalogoController" >
            
-            <result  name="SUCCESS" > /views/catalogo/catalogo.jsp </result>    
+            <result  name="SUCCESS"> </result>    
         </action>
         
        <action name="execute1" class="controller.CatalogoController" method="execute1">
            
-            <result >/views/catalogo/editar.jsp</result> 
+            <result name="SUCCESS" >/views/catalogo/editar.jsp</result> 
         </action>
         <action name="eliminar" class="controller.CatalogoController" method="eliminar" > 
             <result name="SUCCESS">/views/catalogo/eliminar.jsp  </result>
         </action>
      
          <action name="Actualizar" class="controller.CatalogoController" method="Actualizar" > 
-            <result name="SUCCESS">/views/organizador/organizadoractualizada.jsp  </result>
+            <result name="SUCCESS">/views/catalogo/catalogoactualizada.jsp  </result>
             <result name="error"> /views/organizador/editar.jsp </result>
+        </action>
+        <action name= "inicio"  >
+            <result type="redirect"> /views/inicio/bienvenido.jsp</result>      
+           
         </action>
     </package>
 </struts>

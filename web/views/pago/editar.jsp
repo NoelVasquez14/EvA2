@@ -16,18 +16,16 @@
         <fieldset style="width: 300px"> 
             <legend>Actualizar AOrganizador</legend>
             <s:form action="Actualizar">   
+                 <s:iterator value="datos" var="dato" status="estado"> 
                 <s:textfield name="id" label="ID" />
-                <s:textfield  label="NOMBRE COMPLETO" name="txtnombreorazonsocial"></s:textfield>
-                <s:textfield  label="RFC" name="txtrfc"></s:textfield>
-                <s:textfield  label="CONTACTO" name="txtcontacto"></s:textfield>
-                <s:textfield  label="URL" name="txturl"></s:textfield>
-                <s:textfield  label="CORREO" name="txtcorreo"></s:textfield>
-                <s:textfield  label="TELEFONO" name="txttelefono"></s:textfield>
-                <s:textfield  label="DIRECCION" name="txtdireccion"></s:textfield>
+                <s:textfield  type="date"  label="Fecha de pago" format="YYYY-MM-dd"  pattern = "yyyy-MM-dd" name="fechapago">  </s:textfield>
+                
+                <s:textfield label="Participante Id" name="partipante_id" />
                       
-                     
+ 
                  
                 <s:submit  value="Registrar" />
+                </s:iterator>
             </s:form>
 
         </fieldset> 

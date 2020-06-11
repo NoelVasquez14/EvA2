@@ -6,28 +6,26 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
         
     </head>
-    <body>
-        
-           <div class="flex-center position-ref full-height">
+    <body >
+      
+           <div align="center" style="border-color: red">
             
-            <div class="content">
-                <div class="title m-b-md">
-                    STRUTS2
-                </div>
+               <div class="content" style="align-content: center">
+                   <h1 style="color: red" > PROYECTO REALIZADO CON STRUST2 </h1>
 
-                <div class="links">
+                <div class="container">
 
                     <s:a action="categoria/categoria" > 
 
-                        <i class="btn btn-primary">CATEGORIA</i> 
+                        <i class="btn btn-primary" >CATEGORIA</i> 
                     </s:a>   
                     <s:a action="actividad/actividad" > 
 
                         <i class="btn btn-primary">ACTIVIDAD</i> 
                     </s:a>  
-                    <s:a action="ponente/ponente" > 
+                    <s:a action="horario/horario" > 
 
-                        <i class="btn btn-primary">PONENTE</i> 
+                        <i class="btn btn-primary">HORARIO</i> 
                     </s:a>  
                  
                     <s:a action="participante/participante" > 
@@ -38,9 +36,17 @@
 
                     <i class="btn btn-primary">ORGANIZADOR</i> 
                     </s:a>  
+                     <s:a action="pago/pago" > 
+
+                    <i class="btn btn-primary">PAGO</i> 
+                    </s:a>  
+                    <s:a action="evento/evento" > 
+
+                    <i class="btn btn-primary">EVENTO</i> 
+                    </s:a>  
                 </div>
             </div>
         </div>
-            
+          
     </body>
 </html>

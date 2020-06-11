@@ -26,7 +26,7 @@
         <h4> Descripcion: <s:property value= "objAct.descripcion"/> </h4>
         
                <s:a  action ="regresar" cssClass="btn btn-primary" > Catalogo Actividades</s:a>
-                <s:a  action ="insertarActividad" cssClass="btn btn-primary" > Registro Nuevo </s:a>
+                <s:a  action ="insertar" cssClass="btn btn-primary" > Registro Nuevo </s:a>
     </center>
     
     </body>

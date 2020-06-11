@@ -17,9 +17,13 @@
         <title>Actividad</title>
     
    </head>
-    <body>
+    <body style="background: coral">
        
-        
+       <p>
+        <p>
+            <br>
+            <br>
+            <br> 
     <center>
         <h1 style="color:red"> Registro actualizado con éxito</h1>
          <h4> ID: <s:property value= "id"/> </h4>

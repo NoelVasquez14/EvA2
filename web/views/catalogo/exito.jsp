@@ -14,10 +14,10 @@
         <meta charset="UTF-8"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
          
-        <title>Actividad</title>
+        <title>organizador</title>
     
    </head>
-    <body>
+    <body style="background: coral">
        
         
     <center>
@@ -29,8 +29,8 @@
         <h4> Correo: <s:property value= "objOrg.correo"/> </h4>
         <h4> Telefono: <s:property value= "objOrg.telefono"/> </h4>
         <h4> Direccion: <s:property value= "objOrg.direccion"/> </h4>
-               <s:a  action ="regresar" cssClass="btn btn-primary" > Catalogo Actividades</s:a>
-                <s:a  action ="insertarOrganizador" cssClass="btn btn-primary" > Registro Nuevo </s:a>
+               <s:a  action ="catalogo" cssClass="btn btn-primary" > Catalogo Actividades</s:a>
+                <s:a  action ="insertar" cssClass="btn btn-primary" > Registro Nuevo </s:a>
     </center>
     
     </body>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\evaStruts.clpprj">
+ <settings>
+  <PM_URL><![CDATA[http://localhost/C:/Users/nvasq_/Documents/NetBeansProjects/evaStruts]]></PM_URL>
+  <PM_HOME_URL><![CDATA[http://localhost/C:/Users/nvasq_/Documents/NetBeansProjects/evaStruts]]></PM_HOME_URL>
+  <PM_LIBS><![CDATA[]]></PM_LIBS>
+  <PM_FTP_CONNECTION><![CDATA[]]></PM_FTP_CONNECTION>
+  <PM_FTP_DIR><![CDATA[]]></PM_FTP_DIR>
+  <PM_FTP_UPLOAD_ON_SAVE><![CDATA[INT:0]]></PM_FTP_UPLOAD_ON_SAVE>
+ </settings>
+ <removed value=";"/>
+ <added value=""/>
+ <lastopfiles>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\views\inicio\menu2.html"/>
+  <lastactivefile name=""/>
+ </lastopfiles>
+ <todoblock>
+  <todofile name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\js\bootstrap.bundle.js">
+   <todo pos="5;4687" name="todo (fat): these should probably be refactored out of modal.js"/>
+   <todo pos="13;5839" name="TODO (fat): remove sketch reliance on jQuery position/offset"/>
+  </todofile>
+  <todofile name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\js\bootstrap.js">
+   <todo pos="5;2253" name="todo (fat): these should probably be refactored out of modal.js"/>
+   <todo pos="13;3405" name="TODO (fat): remove sketch reliance on jQuery position/offset"/>
+  </todofile>
+  <todofile name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\js\bootstrap.bundle.js">
+   <todo pos="5;4687" name="todo (fat): these should probably be refactored out of modal.js"/>
+   <todo pos="13;5839" name="TODO (fat): remove sketch reliance on jQuery position/offset"/>
+  </todofile>
+  <todofile name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\js\bootstrap.js">
+   <todo pos="5;2253" name="todo (fat): these should probably be refactored out of modal.js"/>
+   <todo pos="13;3405" name="TODO (fat): remove sketch reliance on jQuery position/offset"/>
+  </todofile>
+ </todoblock>
+ <dbgurls/>
+ <filescache>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\web\WEB-INF\web.xml" crc="1586079520563"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\web\WEB-INF\validator-rules.xml" crc="1586079520394"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\web\WEB-INF\validation.xml" crc="1586079520306"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\web\WEB-INF\tiles-defs.xml" crc="1586079520215"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\web\WEB-INF\struts-config.xml" crc="1586079520112"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\web\META-INF\context.xml" crc="1586079516601"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\src\java\struts.xml" crc="1588325402420"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\src\java\actividad.xml" crc="1588325312782"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\nbproject\private\private.xml" crc="1588915961480"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\nbproject\project.xml" crc="1586079519264"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\nbproject\build-impl.xml" crc="1586079519880"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\nbproject\ant-deploy.xml" crc="1586079514082"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build\web\WEB-INF\classes\struts.xml" crc="1588325402781"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build\web\WEB-INF\classes\actividad.xml" crc="1588325313989"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build\web\WEB-INF\web.xml" crc="1588193571335"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build\web\WEB-INF\validator-rules.xml" crc="1588193571327"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build\web\WEB-INF\validation.xml" crc="1588193571323"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build\web\WEB-INF\tiles-defs.xml" crc="1588193571295"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build\web\WEB-INF\struts-config.xml" crc="1588193571287"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build\web\META-INF\context.xml" crc="1588193571279"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\WebApplication1\build.xml" crc="1586079519939"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\js\popper.min.js" crc="1567090358000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\js\jquery-3.4.1.min.js" crc="1563381208000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\js\bootstrap.min.js" crc="1516293216000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\js\bootstrap.js" crc="1516293211000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\js\bootstrap.bundle.min.js" crc="1516293216000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\js\bootstrap.bundle.js" crc="1516293211000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\css\formulario.css" crc="1591402979878"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\css\diseñoformulario.css" crc="1591383015926"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\css\bootstrap.min.css" crc="1516293210000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\css\bootstrap.css" crc="1516293200000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\css\bootstrap-reboot.min.css" crc="1516293211000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\css\bootstrap-reboot.css" crc="1516293200000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\css\bootstrap-grid.min.css" crc="1516293211000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\css\bootstrap-grid.css" crc="1516293200000"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\web.xml" crc="1588833038296"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\validator-rules.xml" crc="1586069964006"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\validation.xml" crc="1586069964004"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\tiles-defs.xml" crc="1586069963965"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\WEB-INF\struts-config.xml" crc="1588901744333"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\views\inicio\menu2.html" crc="1591407882764"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\META-INF\context.xml" crc="1588193552842"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\web\index.html" crc="1586053047506"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\struts.xml" crc="1591407225334"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\participante.xml" crc="1588732085477"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\pago.xml" crc="1588803267990"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\organizador.xml" crc="1591294517803"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\login.xml" crc="1588205858076"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\horario.xml" crc="1591295885474"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\evento.xml" crc="1588745887708"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\categoria.xml" crc="1589410667330"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\catalogo.xml" crc="1588999284256"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\src\java\actividad.xml" crc="1589343452795"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\nbproject\private\private.xml" crc="1591587792686"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\nbproject\project.xml" crc="1588808258520"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\nbproject\build-impl.xml" crc="1588808263277"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\nbproject\ant-deploy.xml" crc="1588376625109"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\js\popper.min.js" crc="1591406418660"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\js\jquery-3.4.1.min.js" crc="1591406418647"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\js\bootstrap.min.js" crc="1591406418610"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\js\bootstrap.js" crc="1591406418588"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\js\bootstrap.bundle.min.js" crc="1591406418546"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\js\bootstrap.bundle.js" crc="1591406418509"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\css\formulario.css" crc="1591406418495"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\css\diseñoformulario.css" crc="1591406418479"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\css\bootstrap.min.css" crc="1591406418441"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\css\bootstrap.css" crc="1591406418391"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\css\bootstrap-reboot.min.css" crc="1591406418354"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\css\bootstrap-reboot.css" crc="1591406418319"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\css\bootstrap-grid.min.css" crc="1591406418280"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\css\bootstrap-grid.css" crc="1591406418158"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\struts.xml" crc="1591407226187"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\participante.xml" crc="1589413804801"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\pago.xml" crc="1589413804801"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\organizador.xml" crc="1591294527945"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\login.xml" crc="1589413804785"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\horario.xml" crc="1591295886207"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\evento.xml" crc="1589413804769"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\categoria.xml" crc="1589413804738"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\catalogo.xml" crc="1589413804723"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\classes\actividad.xml" crc="1589413804723"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\web.xml" crc="1589413800144"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\validator-rules.xml" crc="1589413800129"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\validation.xml" crc="1589413800129"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\tiles-defs.xml" crc="1589413800113"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\WEB-INF\struts-config.xml" crc="1589413800097"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\views\inicio\menu2.html" crc="1591407884316"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\META-INF\context.xml" crc="1589413800082"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build\web\index.html" crc="1589413800144"/>
+  <file name="C:\Users\nvasq_\Documents\NetBeansProjects\evaStruts\build.xml" crc="1588808263402"/>
+ </filescache>
+</project>

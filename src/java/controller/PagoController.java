@@ -7,12 +7,15 @@ package controller;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
-import java.sql.Date;
+import com.restfb.json.ParseException;
+
 
 
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import java.util.Date;
+import java.text.SimpleDateFormat;
 import mantenimientos.GestionPago;
 
 import modelos.Pago;
@@ -28,16 +31,22 @@ private int id;
  private PagoController Pago;
     private Date fechapago;
     private int participante_id;
+    
    
 
  private Pago con;
 
-    public Date getFechapago() {
+    public Date  getFechapago() {
         return fechapago;
     }
 
-    public void setFechapago(Date fechapago) {
-        this.fechapago = fechapago;
+    public void setFechapago(String fechapago) throws java.text.ParseException {
+         try {
+        this.fechapago=new SimpleDateFormat("yyyy-MM-dd").parse(fechapago);
+    } catch (ParseException e) {
+        e.printStackTrace();
+    }
+       
     }
 
     public int getparticipante_id() {
@@ -101,7 +110,7 @@ private int largo;
       private Pago objPag;
 
     public String ingresar(){
-    objPag = new Pago(fechapago , participante_id );
+    objPag = new Pago((java.sql.Date) fechapago, participante_id );
     try {
         GestionPago ac = new GestionPago();
         ac.RegistrarEntradas(objPag);
@@ -116,7 +125,7 @@ private int largo;
     
     
     public String  Actualizar(){
-    objPag = new Pago ( fechapago, participante_id);
+    objPag = new Pago ( (java.sql.Date) fechapago, participante_id);
     
     try {
         GestionPago ac = new GestionPago();
@@ -184,5 +193,13 @@ public String eliminar(){
 {
     return Pago;
 }
+
+    public int getParticipante_id() {
+        return participante_id;
+    }
+
+    public void setParticipante_id(int participante_id) {
+        this.participante_id = participante_id;
+    }
 
 }

@@ -10,7 +10,7 @@
     <package name ="actividad" namespace="/actividad" extends= "struts-default">
         
         <action name="actividad" class="controller.ActividadController" method="execute"> 
-            <result name="success"> /views/actividad/actividad.jsp </result>
+            <result name="SUCCESS"> /views/actividad/actividad.jsp </result>
         
          </action>
         <action name= "insertar" >
@@ -24,12 +24,12 @@
         </action>
         <action name="regresar" class="controller.ActividadController" method="execute">
            
-            <result > /views/actividad/actividad.jsp</result> 
+            <result name="SUCCESS"> /views/actividad/actividad.jsp</result> 
         </action>
         
         <action name="execute1" class="controller.ActividadController" method="execute1">
            
-            <result >/views/actividad/editar.jsp</result> 
+            <result name="SUCCESS">/views/actividad/editar.jsp</result> 
         </action>
         <action name="eliminarActividad" class="controller.ActividadController" method="eliminar" > 
             <result name="SUCCESS">/views/actividad/eliminar.jsp  </result>

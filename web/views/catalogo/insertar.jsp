@@ -12,21 +12,25 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
         <title>CATALOGO</title>
 </head>
-<body>
+<body style="background: coral">
 <div align="center">
 <table>
+<p>
+        <p>
+            <br>
+            <br>
+            <br>
 
-<tr>
-<td>
     <fieldset style="width: 300px"> 
         <legend>Registrar Catalogo</legend>
+        <s:fielderror />
 <s:form action="Registrar">    
-    <s:textfield  label="Titulo" name="titulo"></s:textfield>
-    <s:textfield label="ID Actividad" name="actividad_id"  />
-    <s:textfield label="ID Evento" name="evento_id" />
-    <s:textfield label="costo" name="costo" />
-    <s:textfield label="Total horas" name="totalhoras" />
-    <s:textfield label="Cupo Limite" name="cupolimite" />
+    <s:textfield  label="Titulo" name="titulo"  required="true" ></s:textfield>
+    <s:textfield label="ID Actividad" name="actividad_id" required="true" />
+    <s:textfield label="ID Evento" name="evento_id" required="true" />
+    <s:textfield label="costo" name="costo" required="true" />
+    <s:textfield label="Total horas" name="totalhoras" required="true" />
+    <s:textfield label="Cupo Limite" name="cupolimite" required="true" />
                  <s:submit  value="Registrar" />
 </s:form>
 

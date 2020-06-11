@@ -1,24 +1,14 @@
 package controller;
 
 import com.opensymphony.xwork2.ActionSupport;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.sql.SQLException;
 import java.util.ArrayList;
 import mantenimientos.GestionCatalogo;
 import modelos.Catalogo;
-import utils.MySqlConexion;
 
-/*
- * Bienvenido 
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
-/**
- *
- * @author nvasq_
- */
+
 public class CatalogoController extends ActionSupport {
     private int id;
     private String titulo;
@@ -166,7 +156,7 @@ public String eliminar(){
          this.con=new Catalogo();
          this.datos=con.getData("select * from CATALOGO where id=" +id);
           
-          return SUCCESS;
+          return "SUCCESS";
       }
      public CatalogoController getOrganizador()
 {

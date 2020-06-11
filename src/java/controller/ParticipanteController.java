@@ -7,6 +7,7 @@ package controller;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.validator.annotations.RegexFieldValidator;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import mantenimientos.GestionParticipante;
@@ -133,40 +134,38 @@ private int largo;
         return txtnombre;
     }
 
-    public void setTxtnombre(String txtnombre) {
-        this.txtnombre = txtnombre;
+    public void setTxtnombre(String nombrecompleto) {
+        this.txtnombre = nombrecompleto;
     }
 
     public String getTxtcurp() {
         return txtcurp;
     }
 
-    public void setTxtcurp(String txtcurp) {
-        this.txtcurp = txtcurp;
+    public void setTxtcurp(String curp) {
+        this.txtcurp = curp;
     }
 
     public String getTxtinstitucion() {
         return txtinstitucion;
     }
 
-    public void setTxtinstitucion(String txtinstitucion) {
-        this.txtinstitucion = txtinstitucion;
+    public void setTxtinstitucion(String intitucionprocedencia) {
+        this.txtinstitucion = intitucionprocedencia;
     }
 
     public String getTxtcuenta() {
         return txtcuenta;
     }
 
-    public void setTxtcuenta(String txtcuenta) {
-        this.txtcuenta = txtcuenta;
+    public void setTxtcuenta(String cuenta) {
+        this.txtcuenta = cuenta;
     }
-
     public String getTxtpassword() {
         return txtpassword;
     }
-
-    public void setTxtpassword(String txtpassword) {
-        this.txtpassword = txtpassword;
+    public void setTxtpassword(String password) {
+        this.txtpassword = password;
     }
  
 

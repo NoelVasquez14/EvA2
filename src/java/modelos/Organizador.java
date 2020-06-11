@@ -7,12 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.*;
 
-/**
- *
- * @author nvasq_
- */
 public class Organizador {
     private Connection con;
     private PreparedStatement consultas;

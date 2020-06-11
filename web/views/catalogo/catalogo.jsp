@@ -1,22 +1,147 @@
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8"/>
+   <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"  />
-         
-        <title>Catalogo</title>
-    
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+        <title>Actividades</title>
+
     </head>
-    <body>
-        <h1>CATALOGO</h1>
+    <body  style="background: coral ">
+         <header class="top-header">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark" >
+ 
+<a class="navbar-brand" style="color: white">
+    <img src="/evaStruts/imagenes/logo2.png"    <img src="/imagenes/logo.png" width="60" height="60" class="d-inline-block align-top" alt="">
+ 
+    STRUTS2
+   
+  </a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+          Categoria
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../categoria/categoria">Lista de categorias</a>
+          <a class="dropdown-item" href="../categoria/insertar">Agregar Categoria</a>
+          
+        </div>
+      </li>
+    </ul>
+      <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+          Actividad
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../actividad/actividad">Lista de acitvidades</a>
+          <a class="dropdown-item" href="../actividad/insertar">Agregar actividad</a>
+          
+        </div>
+      </li>
+    </ul>
+      <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+         Catalogo
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../catalogo/catalogo">Lista de catalogos</a>
+          <a class="dropdown-item" href="../catalogo/insertar">Agregar catalogo</a>
+          
+        </div>
+      </li>
+    </ul>
+      <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+         participante
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../participante/participante">Lista de participantes</a>
+          <a class="dropdown-item" href="../participante/insertar">Agregar participante</a>
+          
+        </div>
+      </li>
+    </ul>
+      <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+        Horario
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../horario/horario">Lista de horarios</a>
+          <a class="dropdown-item" href="../horario/horario">Agregar horario</a>
+          
+        </div>
+      </li>
+    </ul>
+      <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+        Pago
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../pago/pago">Lista de pago</a>
+          <a class="dropdown-item" href="../pago/pago">Agregar pago</a>
+          
+        </div>
+      </li>
+      </ul>
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+        Organizador
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../organizador/organizador">Listado de organizadores </a>
+          <a class="dropdown-item" href="../organizador/organizador">Agregar Organizador</a>
+          
+        </div>
+      </li>
+      </ul>
+      <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+        Evento
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../evento/evento">Listado de eventos </a>
+          <a class="dropdown-item" href="../evento/evento">Agregar Evento</a>
+          
+        </div>
+      </li>
+      </ul>
+  </div>
+</nav>
+    </header>
+        <div  aling="center">  <h1>CATALOGO</h1> </div>
         
         <p>
-       <s:a   cssClass="btn btn-success" action="insertar" > Agregar</s:a>
+       <s:a   cssClass="btn btn-primary" action="insertar" > Agregar</s:a>
     </p>
-        <table class="table table-bordered">
+        <table class="table table-striped table-dark">
             <thead> 
             <th>ID</th>
             <th>TITULO</th>
@@ -50,6 +175,8 @@
             </s:iterator>
             </tbody>
         </table>
+  
+        <s:action name="inicio" namespace="/" executeResult="true" >INICIO </s:action>
     </body>
             
       

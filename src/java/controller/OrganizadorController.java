@@ -7,6 +7,11 @@ package controller;
 
 import static com.opensymphony.xwork2.Action.SUCCESS;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.validator.annotations.ConversionErrorFieldValidator;
+import com.opensymphony.xwork2.validator.annotations.EmailValidator;
+import com.opensymphony.xwork2.validator.annotations.StringLengthFieldValidator;
+import com.opensymphony.xwork2.validator.annotations.UrlValidator;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -50,9 +55,9 @@ private int id;
     
 }
     
-    
+    //metodo que manda un objeto de tipo organizador a la clase GestionOrganizador 
     public String  Actualizar(){
-    objOrg = new Organizador (txtnombreorazonsocial,txtrfc ,txtcontacto,txturl,txtcorreo,txttelefono,txtdireccion);
+    objOrg = new Organizador (txtnombreorazonsocial , txtrfc, txtcontacto, txturl , txtcorreo, txttelefono, txtdireccion);
     
     try {
         GestionOrganizador ac = new GestionOrganizador();
@@ -65,7 +70,7 @@ private int id;
     
     }
     
-//metodo que permite eliminar la actividad a traves de la id
+//metodo que permite eliminar al organizador a traves de la id
 public String eliminar(){
     objOrg = new Organizador (id);
     
@@ -87,61 +92,63 @@ public String eliminar(){
         this.nombre = nombre;
     }
 
-    public String getTxtnombreorazonsocial() {
+    public String getNombreorazonsocial() {
         return txtnombreorazonsocial;
     }
 
-    public void setTxtnombreorazonsocial(String txtnombreorazonsocial) {
-        this.txtnombreorazonsocial = txtnombreorazonsocial;
+    public void setNombreorazonsocial(String nombreorazonsocial) {
+        this.txtnombreorazonsocial = nombreorazonsocial;
     }
 
-    public String getTxtrfc() {
+    public String getRfc() {
         return txtrfc;
     }
 
-    public void setTxtrfc(String txtrfc) {
-        this.txtrfc = txtrfc;
+    public void setRfc(String rfc) {
+        this.txtrfc = rfc;
     }
 
-    public String getTxtcontacto() {
+    public String getContacto() {
         return txtcontacto;
     }
 
-    public void setTxtcontacto(String txtcontacto) {
-        this.txtcontacto = txtcontacto;
+    public void setContacto(String contacto) {
+        this.txtcontacto = contacto;
     }
 
-    public String getTxturl() {
+    public String getUrl() {
         return txturl;
     }
 
-    public void setTxturl(String txturl) {
-        this.txturl = txturl;
+    public void setUrl(String url) {
+        this.txturl = url;
     }
 
-    public String getTxtcorreo() {
+    public String getCorreo() {
         return txtcorreo;
     }
 
-    public void setTxtcorreo(String txtcorreo) {
-        this.txtcorreo = txtcorreo;
+    public void setCorreo(String correo) {
+        this.txtcorreo = correo;
     }
 
-    public String getTxttelefono() {
+    public String getTelefono() {
         return txttelefono;
     }
 
-    public void setTxttelefono(String txttelefono) {
-        this.txttelefono = txttelefono;
+    public void setTelefono(String telefono) {
+        this.txttelefono = telefono;
     }
 
-    public String getTxtdireccion() {
+    public String getDireccion() {
         return txtdireccion;
     }
 
-    public void setTxtdireccion(String txtdireccion) {
-        this.txtdireccion = txtdireccion;
+    public void setDireccion(String direccion) {
+        this.txtdireccion = direccion;
     }
+    
+    
 
     public Organizador getObjOrg() {
         return objOrg;
@@ -200,16 +207,16 @@ private int largo;
          this.con=new Organizador();
          this.datos=con.getData("select * from organizador");
          
-          return SUCCESS;
+          return "SUCCESS";
       }
   
-         
+         //este codigo realiza la consulta de el rganizador con el id seleccionado
  public String execute1() throws SQLException, Exception {
          this.datos=new ArrayList<>();
          this.con=new Organizador();
          this.datos=con.getData("select * from ORGANIZADOR where id=" +id);
           
-          return SUCCESS;
+          return "SUCCESS";
       }
      public OrganizadorController getOrganizador()
 {

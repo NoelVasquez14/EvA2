@@ -12,8 +12,13 @@
         <title>eliminarCategoria</title>
     
    </head>
-    <body>
-     
+    <body style="background: coral">
+       
+       <p>
+        <p>
+            <br>
+            <br>
+            <br> 
     <center>
         <h1> Registro eliminado con éxito</h1>
         <h2> Se elimino correctamente la categoria con: </h2>

@@ -15,7 +15,13 @@
         <title>Categoria</title>
     
     </head>
-    <body>
+  <body style="background: coral">
+       
+       <p>
+        <p>
+            <br>
+            <br>
+            <br> 
         <h1>Lista de actividades</h1>
         
         <p>

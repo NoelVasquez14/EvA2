@@ -9,7 +9,7 @@
     <package name ="organizador" namespace="/organizador" extends= "struts-default">
         <action name="organizador" class="controller.OrganizadorController" method = "execute">
            
-            <result > /views/organizador/organizador.jsp </result>
+            <result name="SUCCESS"> /views/organizador/organizador.jsp </result>
            
         </action>
         <action name= "insertar" >
@@ -24,12 +24,12 @@
         </action>
         <action name="regresar" class="controller.OrganizadorController" method="execute">
            
-            <result > /views/organizador/organizador.jsp</result> 
+            <result name="SUCCESS"> /views/organizador/organizador.jsp</result> 
         </action>
         
        <action name="execute1" class="controller.OrganizadorController" method="execute1">
            
-            <result >/views/organizador/editar.jsp</result> 
+            <result name="SUCCESS">/views/organizador/editar.jsp</result> 
         </action>
         <action name="eliminar" class="controller.OrganizadorController" method="eliminar" > 
             <result name="SUCCESS">/views/organizador/eliminar.jsp  </result>
